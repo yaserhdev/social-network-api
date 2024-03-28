@@ -75,7 +75,7 @@ module.exports = {
         try {
             const friend = await User.findOneAndUpdate(
                 { _id: req.params.userId },
-                { $addToSet: { friends: req.body } },
+                { $addToSet: { friends: friend._id } },
                 { runValidators: true, new: true }
             )
             if (!friend) {
