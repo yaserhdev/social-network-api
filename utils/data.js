@@ -13,20 +13,20 @@ const users = [
     //     friends: []
     // }
     {
-        username: ,
-        email: ,
+        username: 'yaserh',
+        email: 'yaser.894@icloud.com',
         thoughts: [],
         friends: []
     },
     {
-        username: ,
-        email: ,
+        username: 'jdubgroot',
+        email: 'jakewgrodt@gmail.com',
         thoughts: [],
         friends: []
     },
     {
-        username: ,
-        email: ,
+        username: 'ojpineda',
+        email: 'owenjp@hotmail.com',
         thoughts: [],
         friends: []
     }
@@ -34,84 +34,84 @@ const users = [
 
 const thoughts = [
     {
-        thoughtText: '',
-        username: ,
+        thoughtText: "Hi I'm Yaser and this is my first post!",
+        username: 'yaserh',
         reactions: []
     },
     {
-        thoughtText: '',
-        username: ,
+        thoughtText: "Hi I'm Jake and this is my first post!",
+        username: 'jdubgroot',
         reactions: []
     },
     {
-        thoughtText: '',
-        username: ,
+        thoughtText: "Hi I'm Owen and this is my first post!",
+        username: 'ojpineda',
         reactions: []
     },
     {
-        thoughtText: '',
-        username: ,
+        thoughtText: "I drive an Audi S4 and it's probably the best car I've ever driven!",
+        username: 'yaserh',
         reactions: []
     },
     {
-        thoughtText: '',
-        username: ,
+        thoughtText: "I drive a BMW 435i and I love the 'real driver' feel along with the comfort!",
+        username: 'jdubgroot',
         reactions: []
     },
     {
-        thoughtText: '',
-        username: ,
+        thoughtText: "I drive an Acura Integra and what I enjoy most is being able to add a lot of mods!",
+        username: 'ojpineda',
         reactions: []
     }
 ];
 
 const reactions = [
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Hey Yaser, I'm Jake!",
+        username: 'jdubgroot'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Hey Yaser, I'm Owen!",
+        username: 'ojpineda'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Hey Jake, I'm Yaser!",
+        username: 'yaserh'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Hey Jake, I'm Owen!",
+        username: 'ojpineda'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Hey Owen I'm Yaser!",
+        username: 'yaserh'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Hey Owen I'm Jake!",
+        username: 'jdubgroot'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Wow that makes us German rivals.",
+        username: 'jdubgroot'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "You'll most like dust me...but nice car!",
+        username: 'ojpineda'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "Not sure how I feel about BMW drivers.",
+        username: 'yaserh'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "You might dust me if you catch me slipping!",
+        username: 'ojpineda'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "A luxury Honda huh?",
+        username: 'yaserh'
     },
     {
-        reactionBody: '',
-        username: 
+        reactionBody: "More race car...",
+        username: 'jdubgroot'
     }
 ];

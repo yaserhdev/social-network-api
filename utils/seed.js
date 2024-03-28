@@ -29,4 +29,6 @@ connection.once('open', async () => {
     console.table(users);
     console.table(thoughts);
     console.table(reactions);
+    console.info('Seeding complete!');
+    process.exit(0)
 });
