@@ -88,5 +88,18 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
+    },
+    // Delete a reaction
+    async deleteReaction(req, res) {
+        try {
+            const reaction = await Reaction.findOneAndRemove({ reactionId: req.params.reactionId });
+            if (!reaction) {
+                return res.status(404).json({ message: 'No reaction with that ID was found!' })
+            }
+            res.json(reaction);
+            res.json({ message: 'Reaction successfully deleted!' });
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
 };
