@@ -1,5 +1,5 @@
 // Import Thought model
-const Thought = require('../models/Thought');
+const { Thought, Reaction } = require('../models/Thought');
 
 // Export and define controllers
 module.exports = {
@@ -68,7 +68,19 @@ module.exports = {
     // Create a reaction to a thought
     async createReaction(req, res) {
         try {
-            const reaction = await 
+            const reaction = await Reaction.create(req.body);
+            const thought = await Thought.findOneAndUpdate(
+                { _id: req.params.thoughtId },
+                { $addToSet: { reactions: reaction.reactionId } },
+                { new: true }
+            );
+            if (!thought) {
+                return res.status(404).json({ message: 'No thought with that ID was found!' })
+            }
+            res.json(reaction, thought);
+            res.json({ message: 'Reaction successfully created!' });
+        } catch (err) {
+            res.status(500).json(err);
         }
     }
 };
