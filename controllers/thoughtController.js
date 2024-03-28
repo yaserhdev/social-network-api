@@ -64,5 +64,11 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
+    },
+    // Create a reaction to a thought
+    async createReaction(req, res) {
+        try {
+            const reaction = await 
+        }
     }
 };
