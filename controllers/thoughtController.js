@@ -1,5 +1,5 @@
 // Import Thought, Reaction, and User models
-const { Thought, Reaction } = require('../models/Thought');
+const { Thought } = require('../models');
 const User = require('../models/User')
 
 // Export and define controllers
@@ -31,11 +31,10 @@ module.exports = {
         try {
             const thought = await Thought.create(req.body);
             const user = await User.findOneAndUpdate(
-                { _id: req.params.userId },
+                { _id: req.body.userId },
                 { $addToSet: { thoughts: thought._id }},
                 { new: true }
             )
-            res.json(thought, user);
             res.json({ message: 'Thought successfully created!' });
         } catch (err) {
             res.status(500).json(err);
@@ -74,16 +73,15 @@ module.exports = {
     // Create a reaction to a thought
     async createReaction(req, res) {
         try {
-            const reaction = await Reaction.create(req.body);
             const thought = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
-                { $addToSet: { reactions: reaction.reactionId } },
+                { $addToSet: { reactions: req.body } },
                 { new: true }
             );
             if (!thought) {
                 return res.status(404).json({ message: 'No thought with that ID was found!' })
             }
-            res.json(reaction, thought);
+            res.json(thought);
             res.json({ message: 'Reaction successfully created!' });
         } catch (err) {
             res.status(500).json(err);
