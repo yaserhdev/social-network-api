@@ -37,8 +37,8 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
 
 
-![Screenshot of backend testing](assets/images/)
+![Screenshot of backend testing](./assets/images/social-network-api-screenshot.png) 
 
 Application available for download at: https://github.com/yaserhdev/social-network-api
 
-Demo video of application available at: 
+Demo video of application available at: https://youtu.be/m4tZyA3nE8o

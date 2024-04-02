@@ -61,11 +61,11 @@ module.exports = {
                 return res.status(404).json({ message: 'No user with that ID was found! ❌' });
             }
             // BONUS: Delete a deleted users associated thoughts
-            const thought = await User.findOneAndUpdate(
-                { _id: req.params.userId },
-                { $pull: { thoughts: thought.thoughts } },
-                { new: true }
-            )
+            // const thought = await User.findOneAndUpdate(
+            //     { _id: req.params.userId },
+            //     { $pull: { thoughts: thought.thoughts } },
+            //     { new: true }
+            // )
             res.json({ message: 'User successfully deleted! 👨‍💻' });
         } catch (err) {
             res.status(500).json(err);
